@@ -12,10 +12,16 @@ class Clock extends React.Component {
     let seconds = this.state.time.getSeconds();
 
     return (
-      <>
-      <h1>clock</h1>
-      <p>{hours}:{minutes}:{seconds}</p>
-      </>
+      <div className="clock-widget">
+        <p>
+          <span>Time</span>
+          <span>{hours}:{minutes}:{seconds}</span>
+        </p>
+        <p>
+          <span>Date</span>
+          <span>{this.state.time.toDateString()}</span>
+        </p>
+      </div>
     );
   }
 
